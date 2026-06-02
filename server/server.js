@@ -90,7 +90,6 @@ app.post("/api/generate-idea", async (req, res) => {
   } catch (err) {
     console.error("AI ERROR:");
     console.error(err);
-    // console.error(err.response?.data || err.message);
 
     return res.status(500).json({
       error: "Не удалось получить ответ от ИИ",

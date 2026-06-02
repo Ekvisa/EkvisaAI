@@ -45,7 +45,7 @@ npm install
 node server.js
 ```
 
-В папке `/server` создайте .env файл:
+Создайте файл .env в папке сервера:
 
 ```
 OPENROUTER_API_KEY=your_key

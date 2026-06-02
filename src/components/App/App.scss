@@ -4,21 +4,41 @@ body {
   font-family: Verdana;
   line-height: 1.5em;
   color: #333;
+  background-color: linen;
 }
 
 .app {
-  width: 50%;
-  margin: 0 auto;
+  width: 80vw;
+  margin: 4em auto;
+  gap: 5vw;
+  @media (min-width: 1024px) {
+    display: flex;
+  }
 }
 
-.h1 {
+h1 {
   font-family: Georgia;
+  margin: 0 0 2em;
+  color: #666;
+}
+
+h2 {
+  font-weight: normal;
 }
 
 .hero {
+  flex: 1;
+}
+
+.form {
+  flex: 1;
   img {
-    width: 300px;
+    max-width: 300px;
     display: block;
     margin: 0 auto;
+  }
+  textarea,
+  input {
+    background-color: transparent;
   }
 }

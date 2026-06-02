@@ -1,4 +1,5 @@
 import { useState, type FormEvent } from "react";
+import ekvisa from "../../assets/girl.svg";
 
 type IdeaResponse = {
   idea: string;
@@ -8,9 +9,6 @@ type IdeaResponse = {
 };
 
 function Form() {
-  //   const [interests, setInterests] = useState("");
-  //   const [technologies, setTechnologies] = useState("");
-
   const [idea, setIdea] = useState<IdeaResponse | null>(null);
   const [loading, setLoading] = useState(false);
 
@@ -50,30 +48,33 @@ function Form() {
   }
 
   return (
-    <>
-      <h1>Ekvisa</h1>
+    <div className="form">
+      <img src={ekvisa} alt="ekvisa" />
+      <p>
+        Привет, я Ekvisa. <br />
+        Люблю придумывать пет-проекты.
+        <br />
+        Иногда они остаются просто идеями, иногда превращаются в код, а иногда
+        начинают жить своей жизнью.
+        <br />
+        Мои пет-проекты - это любимые питомцы, которые учат новому и позволяют
+        играть и творить.
+        <br />
+        Говорят, я генератор идей. Возможно, это правда.
+        <br />
+        Хочешь сенерировать идею для проекта? Опиши свои интересы и технологии,
+        и давай посмотрим, что получится!
+      </p>
 
       <form onSubmit={handleSubmit}>
-        <textarea
-          name="interests"
-          placeholder="Interests"
-          //   value={interests}
-          //   onChange={(e) => setInterests(e.target.value)}
-        />
+        <textarea name="interests" placeholder="Interests" />
 
-        <textarea
-          name="technologies"
-          placeholder="Technologies"
-          //   value={technologies}
-          //   onChange={(e) => setTechnologies(e.target.value)}
-        />
+        <textarea name="technologies" placeholder="Technologies" />
 
         <input
           name="email"
           type="email"
           placeholder="Email для отправки идеи"
-          //   value={email}
-          //   onChange={(e) => setEmail(e.target.value)}
         />
 
         <button disabled={loading}>
@@ -96,7 +97,7 @@ function Form() {
           </ul>
         </section>
       )}
-    </>
+    </div>
   );
 }
 
