@@ -1,0 +1,20 @@
+<!-- Проверяет, отвечает ли АПИ: перейти по ссылке http://localhost:3001/api/generate-idea - в консоли должен быть json с ответом от модели -->
+<!doctype html>
+<html>
+  <body>
+    <script>
+      fetch("http://localhost:3001/api/generate-idea", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          interests: "drawing, games",
+          technologies: "React, Node.js",
+        }),
+      })
+        .then((r) => r.text())
+        .then(console.log);
+    </script>
+  </body>
+</html>
