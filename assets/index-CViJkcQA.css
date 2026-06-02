@@ -1,0 +1,1 @@
+body{color:#333;background-color:linen;margin:0;padding:0;font-family:Verdana;line-height:1.5em}.app{gap:5vw;width:80vw;margin:4em auto}@media (width>=1024px){.app{display:flex}}h1{color:#666;margin:0 0 2em;font-family:Georgia}h2{font-weight:400}.hero,.form{flex:1}.form img{max-width:300px;margin:0 auto;display:block}.form textarea,.form input{background-color:#0000}
